@@ -14,7 +14,7 @@ Before you begin, ensure you have the following installed:
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/nithinpp69/react-native-circular-progress-indicator.git
+    git clone https://github.com/HarryMtv/react-native-circular-progress-indicator.git
     ```
 
 2.  Navigate to the project directory:
@@ -26,7 +26,7 @@ Before you begin, ensure you have the following installed:
 3.  Install the dependencies:
 
     ```bash
-    npm install
+    `npm install @harrymtv/react-native-circular-progress-indicator`
     ```
 
 ## Building
@@ -50,7 +50,7 @@ This will create a `lib` directory with the compiled code.
 2.  Publish the package:
 
     ```bash
-    npm publish
+    npm publish --access public
     ```
 
     **Note:** Make sure you have the correct permissions to publish this package. You may need to be added as a collaborator on npm.
