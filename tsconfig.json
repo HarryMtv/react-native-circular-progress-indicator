@@ -12,9 +12,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@src/*": [
-        "src/*"
-      ],
+      "@src/*": ["src/*"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -22,10 +20,6 @@
     "outDir": "./lib",
     "declaration": true
   },
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-  ],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"],
   "include": ["src"]
 }

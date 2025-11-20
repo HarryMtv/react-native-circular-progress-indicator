@@ -1,13 +1,13 @@
-import React, { forwardRef, useImperativeHandle, useMemo } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import React, { forwardRef, useImperativeHandle, useMemo } from "react";
+import { Text, StyleSheet, View } from "react-native";
 
-import ProgressCircle from '../components/progressCircle';
-import useAnimatedValue from '../hooks/useAnimatedValue';
-import COLORS from '../utils/colors';
-import type { CircularProgressProps, ProgressRef } from '../types';
-import ProgressValue from '../components/progressValue';
+import ProgressCircle from "../components/progressCircle";
+import useAnimatedValue from "../hooks/useAnimatedValue";
+import COLORS from "../utils/colors";
+import type { CircularProgressProps, ProgressRef } from "../types";
+import ProgressValue from "../components/progressValue";
 
-import styles from './styles';
+import styles from "./styles";
 
 const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
   (props, ref) => {
@@ -19,7 +19,7 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
       duration = 500,
       delay = 0,
       maxValue = 100,
-      strokeLinecap = 'round',
+      strokeLinecap = "round",
       onAnimationComplete = () => null,
       activeStrokeColor = COLORS.GREEN,
       activeStrokeSecondaryColor = null,
@@ -30,22 +30,22 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
       clockwise = true,
       startInPausedState = false,
       rotation = 0,
-      title = '',
+      title = "",
       titleStyle = {},
       titleColor,
       titleFontSize,
       progressValueColor,
       progressValueStyle = {},
       progressValueFontSize,
-      valuePrefix = '',
-      valueSuffix = '',
+      valuePrefix = "",
+      valueSuffix = "",
       showProgressValue = true,
-      subtitle = '',
+      subtitle = "",
       subtitleStyle = {},
       subtitleColor,
       subtitleFontSize,
       progressFormatter = (v: number) => {
-        'worklet';
+        "worklet";
 
         return Math.round(v);
       },
@@ -115,7 +115,7 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
         subtitleColor,
         subtitleFontSize,
         subtitleStyle,
-      ]
+      ],
     );
 
     return (
@@ -131,7 +131,7 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
             inActiveStrokeColor={inActiveStrokeColor}
             inActiveStrokeWidth={inActiveStrokeWidth}
             inActiveStrokeOpacity={inActiveStrokeOpacity}
-            animatedCircleProps={animatedCircleProps}
+            animatedCircleProps={animatedCircleProps as any}
             dashedStrokeConfig={dashedStrokeConfig}
           />
         </View>
@@ -139,7 +139,8 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
           style={[
             StyleSheet.absoluteFillObject,
             styles(styleProps).valueContainer,
-          ]}>
+          ]}
+        >
           {showProgressValue && (
             <View style={styles(styleProps).valueContainerRow}>
               {!!valuePrefix && (
@@ -151,7 +152,8 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
                     styles(styleProps).fromProps,
                     valuePrefixStyle,
                   ]}
-                  allowFontScaling={allowFontScaling}>
+                  allowFontScaling={allowFontScaling}
+                >
                   {valuePrefix}
                 </Text>
               )}
@@ -175,22 +177,24 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
                     styles(styleProps).fromProps,
                     valueSuffixStyle,
                   ]}
-                  allowFontScaling={allowFontScaling}>
+                  allowFontScaling={allowFontScaling}
+                >
                   {valueSuffix}
                 </Text>
               )}
             </View>
           )}
-          {title && title !== '' ? (
+          {title && title !== "" ? (
             <Text
               testID="progress-title-text"
               style={[styles(styleProps).title, titleStyle]}
               numberOfLines={1}
-              allowFontScaling={allowFontScaling}>
+              allowFontScaling={allowFontScaling}
+            >
               {title}
             </Text>
           ) : null}
-          {subtitle && subtitle !== '' ? (
+          {subtitle && subtitle !== "" ? (
             <Text
               testID="progress-subtitle-text"
               style={[
@@ -199,14 +203,17 @@ const CircularProgress = forwardRef<ProgressRef, CircularProgressProps>(
                 subtitleStyle,
               ]}
               numberOfLines={1}
-              allowFontScaling={allowFontScaling}>
+              allowFontScaling={allowFontScaling}
+            >
               {subtitle}
             </Text>
           ) : null}
         </View>
       </View>
     );
-  }
+  },
 );
+
+CircularProgress.displayName = "CircularProgress";
 
 export default CircularProgress;

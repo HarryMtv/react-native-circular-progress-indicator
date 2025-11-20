@@ -1,16 +1,16 @@
-
-#  React Native Circular Progress Indicator 🔥
+# React Native Circular Progress Indicator 🔥
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)]()
 ![platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-brightgreen.svg?style=for-the-badge&colorB=191A17)
 [![Version](https://img.shields.io/npm/v/react-native-circular-progress-indicator.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-circular-progress-indicator)
 [![npm](https://img.shields.io/npm/dt/react-native-circular-progress-indicator.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-circular-progress-indicator)
 
-A simple and customizable React Native circular progress indicator component. 
+A simple and customizable React Native circular progress indicator component.
 
 This project is inspired from this [Youtube tutorial](https://www.youtube.com/watch?v=x2LtzCxbWI0). Do check it out. Special mention at [@mironcatalin](https://www.youtube.com/channel/UCTcH04SRuyedaSuuQVeAcdg)
 
 ## Demo
+
 ## ❤️ [Try on Expo Snack](https://snack.expo.dev/@nithinpp69/react-native-circular-progress-indicator/?platform=ios)
 
 ![](examples/demo10.gif)
@@ -28,11 +28,11 @@ This project is inspired from this [Youtube tutorial](https://www.youtube.com/wa
 
 ## Prerequisites
 
- ⚠️ Peer Dependencies
+⚠️ Peer Dependencies
 
- * [react-native-svg](https://www.npmjs.com/package/react-native-svg#installation)
- * [react-native-reanimated-v2](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installation/)
- * [react-native-redash](https://github.com/wcandillon/react-native-redash#installation)
+- [react-native-svg](https://www.npmjs.com/package/react-native-svg#installation)
+- [react-native-reanimated-v2](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installation/)
+- [react-native-redash](https://github.com/wcandillon/react-native-redash#installation)
 
 This component has a peer dependency on `react-native-reanimated-v2`. `react-native-reanimated-v2` has to be installed and linked into your project.
 Follow [react-native-reanimated-v2](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installation/) to install the dependency.
@@ -43,22 +43,22 @@ Follow [react-native-svg](https://www.npmjs.com/package/react-native-svg#install
 This component has a peer dependency on `react-native-redash` to make an animation pausable([withPause](https://wcandillon.gitbook.io/redash/animations#withpause)). `react-native-redash` has to be installed and linked into your project.
 Follow [react-native-redash](https://github.com/wcandillon/react-native-redash#installation) to install the dependency. ⚠️IMPORTANT⚠️: make sure the package version is at-least `v15.0.1`
 
-
 ## Installation
 
- Supported version: react-native >= 0.59.0
+Supported version: react-native >= 0.59.0
 
-  ```bash
-  npm install react-native-circular-progress-indicator
-  ```
-  
-  or
-  
-  ```bash
-  yarn add react-native-circular-progress-indicator
-  ```
-  
+```bash
+npm install react-native-circular-progress-indicator
+```
+
+or
+
+```bash
+yarn add react-native-circular-progress-indicator
+```
+
 ## Example
+
 ```jsx
 import CircularProgress from 'react-native-circular-progress-indicator';
 
@@ -82,6 +82,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
 />
 
 ```
+
 ![](examples/demo.gif)
 
 #### With value prefix/suffix
@@ -107,6 +108,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
 />
 
 ```
+
 ![](examples/demo2.gif)
 
 #### With callback function
@@ -126,6 +128,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
 />
 
 ```
+
 ![](examples/demo3.gif)
 
 #### Custom
@@ -145,7 +148,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
   inActiveStrokeWidth={20}
   activeStrokeWidth={40}
 />
-       
+
 <CircularProgress
   value={60}
   radius={120}
@@ -209,6 +212,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
 ```
 
 ![](examples/demo6.gif)
+
 #### With multiple child
 
 ⚠️ IMPORTANT ⚠️
@@ -256,6 +260,7 @@ const props = {
 ```
 
 ![](examples/demo7.gif)
+
 #### Custom progress formatter function
 
 By default, the progress value is rounded to the nearest integer. If you want to display decimal place values, you can do so by,
@@ -279,7 +284,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
   inActiveStrokeColor={'white'}
   progressFormatter={(value: number) => {
     'worklet';
-      
+
     return value.toFixed(2); // 2 decimal places
   }}
 />
@@ -288,6 +293,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
 Make sure to mark this function as a worklet function. Read more about worklets at https://docs.swmansion.com/react-native-reanimated/docs/2.2.0/worklets/
 
 ![](examples/demo8.gif)
+
 #### Dashed circular progress
 
 ```jsx
@@ -313,6 +319,7 @@ import CircularProgress from 'react-native-circular-progress-indicator';
 ```
 
 ![](examples/demo9.gif)
+
 #### Animated stroke color
 
 ```jsx
@@ -332,7 +339,9 @@ import CircularProgress from 'react-native-circular-progress-indicator';
   ]}
 />
 ```
+
 ![](examples/demo11.gif)
+
 #### Play, Pause, and ReAnimate
 
 ```jsx
@@ -365,55 +374,55 @@ progressRef.current.reAnimate();
 
 ## CircularProgressBase Props
 
-| Prop                        | Description                                                                           | Type                          | Default Value       | Required |
-| :--------------------------:|:--------------------------------------------------------------------------------------|:-----------------------------:|:-------------------:|:--------:|
-| value                       | progress value                                                                        | Number                        | 0                   | true     |
-| initialValue                | initial progress value. Helpful when used as a countdown timer                        | Number                        | 0                   | false    |
-| circleBackgroundColor       | progress circle background color                                                      | String                        | 'transparent'       | false    |
-| radius                      | progress circle radius                                                                | Number                        | 60                  | false    |
-| activeStrokeWidth           | active progress circle stroke width                                                   | Number                        | 10                  | false    |
-| inActiveStrokeWidth         | inactive progress circle stroke width                                                 | Number                        | 10                  | false    |
-| duration                    | progress animation duration                                                           | Number                        | 500                 | false    |
-| delay                       | progress animation delay                                                              | Number                        | 0                   | false    |
-| maxValue                    | progress maximum value. Percentage calculation is based on the maximum value provided | String                        | 100                 | false    |
-| inActiveStrokeOpacity       | inactive progress circle opacity value                                                | Number                        | 1                   | false    |
-| rotation                    | rotate the progress ring by this value. Accepts a number from -360 to 360             | Number                        | 0                   | false    |
-| strokeLinecap               | progress stroke line cap                                                              | 'round' or 'butt' or 'square' | 'round'             | false    |
-| onAnimationComplete         | callback when animation is completed.                                                 | Function                      | ()=>null            | false    |
-| activeStrokeColor           | active progress circle color                                                          | String                        | '#2ecc71'         | false    |
-| activeStrokeSecondaryColor  | active progress secondary color. Use this to provide a gradient effect                | String                        | ''                  | false    |
-| inActiveStrokeColor         | inactive progress circle color                                                        | String                        | 'rgba(0,0,0,0.3)' | false    |
-| clockwise                   | show ring progress clockwise or anti-clockwise. pass false to enable anti clock-wise  | Bool                          | true                | false    |
-| dashedStrokeConfig          | display the progress circle as dashed lines with customizable stroke count and width. | DashedStrokeConfigType        | { width: 0, count: 0 }| false  |
-| strokeColorConfig           | animate the progress circle stroke color based on the animation value.                | StrokeColorConfigType[]       | undefined           | false    |
-| startInPausedState          | render the progress circle initially without any animation.                            | Bool                          | false               | false    |
-| children                    | any react element                                                                     | React Element                 | null                | false    |                                
-                                
+|            Prop            | Description                                                                           |             Type              |     Default Value      | Required |
+| :------------------------: | :------------------------------------------------------------------------------------ | :---------------------------: | :--------------------: | :------: |
+|           value            | progress value                                                                        |            Number             |           0            |   true   |
+|        initialValue        | initial progress value. Helpful when used as a countdown timer                        |            Number             |           0            |  false   |
+|   circleBackgroundColor    | progress circle background color                                                      |            String             |     'transparent'      |  false   |
+|           radius           | progress circle radius                                                                |            Number             |           60           |  false   |
+|     activeStrokeWidth      | active progress circle stroke width                                                   |            Number             |           10           |  false   |
+|    inActiveStrokeWidth     | inactive progress circle stroke width                                                 |            Number             |           10           |  false   |
+|          duration          | progress animation duration                                                           |            Number             |          500           |  false   |
+|           delay            | progress animation delay                                                              |            Number             |           0            |  false   |
+|          maxValue          | progress maximum value. Percentage calculation is based on the maximum value provided |            String             |          100           |  false   |
+|   inActiveStrokeOpacity    | inactive progress circle opacity value                                                |            Number             |           1            |  false   |
+|          rotation          | rotate the progress ring by this value. Accepts a number from -360 to 360             |            Number             |           0            |  false   |
+|       strokeLinecap        | progress stroke line cap                                                              | 'round' or 'butt' or 'square' |        'round'         |  false   |
+|    onAnimationComplete     | callback when animation is completed.                                                 |           Function            |        ()=>null        |  false   |
+|     activeStrokeColor      | active progress circle color                                                          |            String             |       '#2ecc71'        |  false   |
+| activeStrokeSecondaryColor | active progress secondary color. Use this to provide a gradient effect                |            String             |           ''           |  false   |
+|    inActiveStrokeColor     | inactive progress circle color                                                        |            String             |   'rgba(0,0,0,0.3)'    |  false   |
+|         clockwise          | show ring progress clockwise or anti-clockwise. pass false to enable anti clock-wise  |             Bool              |          true          |  false   |
+|     dashedStrokeConfig     | display the progress circle as dashed lines with customizable stroke count and width. |    DashedStrokeConfigType     | { width: 0, count: 0 } |  false   |
+|     strokeColorConfig      | animate the progress circle stroke color based on the animation value.                |    StrokeColorConfigType[]    |       undefined        |  false   |
+|     startInPausedState     | render the progress circle initially without any animation.                           |             Bool              |         false          |  false   |
+|          children          | any react element                                                                     |         React Element         |          null          |  false   |
+
 ## CircularProgress Props
 
 CircularProgress component accepts all CircularProgressBase props except the children prop. Along with that, it also accepts the following props.
 
-| Prop                        | Description                                                                           | Type                          | Default Value       | Required |
-| :--------------------------:|:--------------------------------------------------------------------------------------|:-----------------------------:|:-------------------:|:--------:|
-| title                       | title to display below the progress value                                             | String                        | ''                  | false    |
-| titleStyle                  | title text style                                                                      | Object                        | {}                  | false    |
-| titleColor                  | title text color                                                                      | String                        |                     | false    |
-| titleFontSize               | title text font size                                                                  | Number                        |                     | false    |
-| subtitle                    | subtitle to display below the progress value                                          | String                        | ''                  | false    |
-| subtitleStyle               | subtitle text style                                                                   | Object                        | {}                  | false    |
-| subtitleColor               | subtitle text color                                                                   | String                        |                     | false    |
-| subtitleFontSize            | subtitle text font size                                                               | Number                        |                     | false    |
-| progressValueColor          | progress value text color                                                             | String                        |                     | false    |
-| progressValueStyle          | progress value text style                                                             | Object                        | {}                  | false    |
-| progressValueFontSize       | progress value text font size                                                         | Number                        |                     | false    |
-| inActiveStrokeOpacity       | inactive progress circle opacity value                                                | Number                        | 1                   | false    |
-| valuePrefix                 | prefix value                                                                          | String                        | ''                  | false    |
-| valueSuffix                 | suffix value                                                                          | String                        | ''                  | false    |
-| showProgressValue           | show or hide the progress text value                                                  | Bool                          | true                | false    |
-| progressFormatter           | function to format the progress value. Make sure to define it as a worklet function.  | Function                      | (v)=> Math.round(v) | false    |
-| allowFontScaling            | specifies whether fonts should scale to respect Text Size accessibility settings.     | Bool                          | true                | false    |
-| valuePrefixStyle            | custom styling to value prefix. Use this to customize the styling of the value prefix. If not provided, the progress value style/colors will be used. | TextStyle | {} | false |
-| valueSuffixStyle            | custom styling to value suffix. Use this to customize the styling of the value suffix. If not provided, the progress value style/colors will be used. | TextStyle | {} | false |
+|         Prop          | Description                                                                                                                                           |   Type    |    Default Value    | Required |
+| :-------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :-------: | :-----------------: | :------: |
+|         title         | title to display below the progress value                                                                                                             |  String   |         ''          |  false   |
+|      titleStyle       | title text style                                                                                                                                      |  Object   |         {}          |  false   |
+|      titleColor       | title text color                                                                                                                                      |  String   |                     |  false   |
+|     titleFontSize     | title text font size                                                                                                                                  |  Number   |                     |  false   |
+|       subtitle        | subtitle to display below the progress value                                                                                                          |  String   |         ''          |  false   |
+|     subtitleStyle     | subtitle text style                                                                                                                                   |  Object   |         {}          |  false   |
+|     subtitleColor     | subtitle text color                                                                                                                                   |  String   |                     |  false   |
+|   subtitleFontSize    | subtitle text font size                                                                                                                               |  Number   |                     |  false   |
+|  progressValueColor   | progress value text color                                                                                                                             |  String   |                     |  false   |
+|  progressValueStyle   | progress value text style                                                                                                                             |  Object   |         {}          |  false   |
+| progressValueFontSize | progress value text font size                                                                                                                         |  Number   |                     |  false   |
+| inActiveStrokeOpacity | inactive progress circle opacity value                                                                                                                |  Number   |          1          |  false   |
+|      valuePrefix      | prefix value                                                                                                                                          |  String   |         ''          |  false   |
+|      valueSuffix      | suffix value                                                                                                                                          |  String   |         ''          |  false   |
+|   showProgressValue   | show or hide the progress text value                                                                                                                  |   Bool    |        true         |  false   |
+|   progressFormatter   | function to format the progress value. Make sure to define it as a worklet function.                                                                  | Function  | (v)=> Math.round(v) |  false   |
+|   allowFontScaling    | specifies whether fonts should scale to respect Text Size accessibility settings.                                                                     |   Bool    |        true         |  false   |
+|   valuePrefixStyle    | custom styling to value prefix. Use this to customize the styling of the value prefix. If not provided, the progress value style/colors will be used. | TextStyle |         {}          |  false   |
+|   valueSuffixStyle    | custom styling to value suffix. Use this to customize the styling of the value suffix. If not provided, the progress value style/colors will be used. | TextStyle |         {}          |  false   |
 
 ## Methods
 
@@ -439,4 +448,5 @@ progressRef.current.reAnimate();
 ```
 
 ## License
+
 This project is licensed under the MIT License.

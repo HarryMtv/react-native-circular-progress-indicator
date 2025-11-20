@@ -1,5 +1,5 @@
-import type { TextStyle } from 'react-native';
-import { StyleSheet } from 'react-native';
+import type { TextStyle } from "react-native";
+import { StyleSheet } from "react-native";
 
 type StyleProps = {
   radius: number;
@@ -22,17 +22,17 @@ const styles = (props: StyleProps) => {
     container: {
       width: props.radius * 2,
       height: props.radius * 2,
-      alignItems: 'center',
-      justifyContent: 'center',
+      alignItems: "center",
+      justifyContent: "center",
     },
     valueContainer: {
       flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
+      alignItems: "center",
+      justifyContent: "center",
     },
     valueContainerRow: {
-      flexDirection: 'row',
-      alignItems: 'center',
+      flexDirection: "row",
+      alignItems: "center",
     },
     rotatingContainer: {
       transform: [{ rotate: `${props.rotation}deg` }],
@@ -48,12 +48,12 @@ const styles = (props: StyleProps) => {
         props.activeStrokeColor,
     },
     input: {
-      fontWeight: 'bold',
-      textAlign: 'center',
+      fontWeight: "bold",
+      textAlign: "center",
     },
     title: {
-      textAlign: 'center',
-      width: '70%',
+      textAlign: "center",
+      width: "70%",
       marginTop: props.showProgressValue ? props.radius * 0.05 : 0,
       color:
         props.titleColor || props.titleStyle?.color || props.activeStrokeColor,

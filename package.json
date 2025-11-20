@@ -16,9 +16,9 @@
     "lint": "eslint --ext .ts,.tsx . --max-warnings 0",
     "lint:fix": "eslint --ext .ts,.tsx . --fix",
     "tsc": "tsc",
-    "ci": "yarn lint && yarn tsc",
+    "ci": "npm run lint && npm run tsc",
     "build": "bob build",
-    "prepare": "yarn build && husky install"
+    "prepare": "npm run build && husky install"
   },
   "repository": {
     "name": "GitHub",
@@ -42,7 +42,9 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.0",
     "@babel/runtime": "^7.26.0",
+    "@eslint/js": "^9.39.1",
     "@react-native-community/eslint-config": "^3.2.0",
+    "@react-native/babel-preset": "^0.82.0",
     "@testing-library/react-native": "^13.3.3",
     "@types/jest": "^29.5.12",
     "@types/react": "^19.0.0",
@@ -52,24 +54,26 @@
     "babel-jest": "^29.7.0",
     "babel-plugin-module-resolver": "^5.0.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
-    "eslint": "^9.12.0",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.1.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "husky": "^8.0.1",
     "jest": "^29.7.0",
-    "@react-native/babel-preset": "^0.82.0",
-    "prettier": "^2.7.1",
+    "prettier": "^3.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-native": "0.82.1",
-    "react-native-builder-bob": "^0.23.2",
+    "react-native-builder-bob": "^0.40.15",
     "react-native-gesture-handler": "^2.17.1",
-    "react-native-reanimated": "^3.16.1",
+    "react-native-reanimated": "^4.1.5",
     "react-native-svg": "^15.3.0",
     "react-test-renderer": "^19.0.0",
-    "typescript": "^5.6.3"
-  },
-  "resolutions": {
-    "@types/react": "^19"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.47.0"
   },
   "keywords": [
     "react-native",

@@ -3,14 +3,14 @@
 // and https://github.com/coinjar/react-native-wagmi-charts/
 // blob/master/src/components/AnimatedText.tsx for web compatibility
 
-import React, { useMemo, useRef } from 'react';
-import { TextInput, Platform } from 'react-native';
-import Animated, { useAnimatedReaction } from 'react-native-reanimated';
+import React, { useMemo, useRef } from "react";
+import { TextInput, Platform } from "react-native";
+import Animated, { useAnimatedReaction } from "react-native-reanimated";
 
-import COLORS from '../../utils/colors';
-import type { ProgressValueProps } from '../../types';
+import COLORS from "../../utils/colors";
+import type { ProgressValueProps } from "../../types";
 
-import styles from './styles';
+import styles from "./styles";
 
 Animated.addWhitelistedNativeProps({ text: true });
 const AnimatedInput = Animated.createAnimatedComponent(TextInput);
@@ -29,7 +29,7 @@ const ProgressValue: React.FC<ProgressValueProps> = ({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const inputRef = useRef<any>(null);
 
-  if (Platform.OS === 'web') {
+  if (Platform.OS === "web") {
     // only run the reaction on web platform.
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useAnimatedReaction(
@@ -40,7 +40,7 @@ const ProgressValue: React.FC<ProgressValueProps> = ({
         if (data !== prevData && inputRef.current) {
           inputRef.current.value = data;
         }
-      }
+      },
     );
   }
 
@@ -58,7 +58,7 @@ const ProgressValue: React.FC<ProgressValueProps> = ({
       progressValueFontSize,
       progressValueStyle,
       activeStrokeColor,
-    ]
+    ],
   );
 
   return (

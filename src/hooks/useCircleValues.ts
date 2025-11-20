@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo } from "react";
 
 export interface UseCircleValuesProps {
   radius: number;
@@ -13,7 +13,7 @@ export default function useCircleValues({
 }: UseCircleValuesProps) {
   const isSameStrokeWidth = useMemo(
     () => activeStrokeWidth === inActiveStrokeWidth,
-    [activeStrokeWidth, inActiveStrokeWidth]
+    [activeStrokeWidth, inActiveStrokeWidth],
   );
 
   const isActiveStrokeBigger = useMemo(() => {
@@ -42,7 +42,7 @@ export default function useCircleValues({
 
   const circleCircumference = useMemo(
     () => 2 * Math.PI * activeCircleRadius,
-    [activeCircleRadius]
+    [activeCircleRadius],
   );
 
   return {

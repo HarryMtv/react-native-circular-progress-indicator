@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 type StyleProp = {
   radius: number;
@@ -10,13 +10,13 @@ const styles = (props: StyleProp) =>
     container: {
       width: props.radius * 2,
       height: props.radius * 2,
-      alignItems: 'center',
-      justifyContent: 'center',
+      alignItems: "center",
+      justifyContent: "center",
     },
     valueContainer: {
       flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
+      alignItems: "center",
+      justifyContent: "center",
     },
     rotatingContainer: {
       transform: [{ rotate: `${props.rotation}deg` }],

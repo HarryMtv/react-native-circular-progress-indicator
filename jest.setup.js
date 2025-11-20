@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 
-jest.mock('react-native-reanimated', () => {
+jest.mock("react-native-reanimated", () => {
   const mocks = jest.requireActual(
-    './node_modules/react-native-reanimated/mock'
+    "./node_modules/react-native-reanimated/mock",
   );
   return {
     ...mocks,

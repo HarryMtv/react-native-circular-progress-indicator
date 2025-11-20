@@ -1,10 +1,10 @@
-import CircularProgress from './circularProgress';
-import CircularProgressBase from './circularProgressBase';
+import CircularProgress from "./circularProgress";
+import CircularProgressBase from "./circularProgressBase";
 import type {
   DashedStrokeConfigType,
   StrokeColorConfigType,
   ProgressRef,
-} from './types';
+} from "./types";
 
 export default CircularProgress;
 export { CircularProgressBase };

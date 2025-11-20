@@ -1,5 +1,5 @@
-import type { TextStyle } from 'react-native';
-import { StyleSheet } from 'react-native';
+import type { TextStyle } from "react-native";
+import { StyleSheet } from "react-native";
 
 type StyleProps = {
   radius: number;
@@ -22,8 +22,8 @@ const styles = (props: StyleProps) => {
         props.activeStrokeColor,
     },
     input: {
-      fontWeight: 'bold',
-      textAlign: 'center',
+      fontWeight: "bold",
+      textAlign: "center",
       padding: 0,
     },
   });
