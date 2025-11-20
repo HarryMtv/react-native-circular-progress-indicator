@@ -1,5 +1,7 @@
 # React Native Circular Progress Indicator 🔥
 
+This is a forked version of the original project by Nithin P P. You can find the original repository [here](https://github.com/nithinpp69/react-native-circular-progress-indicator).
+
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)]()
 ![platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-brightgreen.svg?style=for-the-badge&colorB=191A17)
 [![Version](https://img.shields.io/npm/v/react-native-circular-progress-indicator.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-circular-progress-indicator)
